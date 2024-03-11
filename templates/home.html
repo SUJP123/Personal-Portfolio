@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujay Patel</title>
+    <link rel="stylesheet" href="../static/styles_home.css">
+</head>
+
+<body>
+    <header>
+      <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#research">Current Research</a></li>
+                <li><a href="#volunteer">Volunteer Work</a></li>
+            </ul>
+        </div>
+    </nav>
+        <div>
+            <img src="../img/IMG_0129.jpg" alt="Your Name" class="header-image">
+            <h1>Sujay Patel</h1>
+            <p>BME and CS student at UNC-Chapel Hll</p>
+
+            <div id="contact-icons">
+              <!-- Gmail Icon -->
+              <a href="#" onclick="copyToClipboard('sujaypatel04@gmail.com')">
+                  <img src="../img/gmail.png" alt="Gmail Icon">
+              </a>
+
+              <a id="copy-number" onclick="copyPhoneNumber()">
+                <img src="../img/message.png" alt="Message">
+              </a>
+
+            <a href="https://www.linkedin.com/in/sujay-patel-2047572a3/" target="_blank" rel="noopener noreferrer">
+              <img src="../img/Linkedin_logo.png" alt="LinkedIn">
+          </a>
+
+          <a href="https://github.com/SUJP123" target="_blank" rel="noopener noreferrer">
+            <img src="../img/GitHub_logo.png" alt="GitHub">
+        </a>
+
+          </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h1>About me:</h1>
+            <p>Hello and welcome to my portfolio. My name is Sujay Patel and 
+                I'm a second year BME and CS student at UNC Chapel Hill. My career goal
+                is to work as a software engineer in the medical device industry, as I'm very
+                passionate about the use of tech and the applications it has in the healthcare field. On this 
+                portfolio I'm planning on displaying the projects and research I'm doing, as well
+                as showing off a bit about me.<p>
+            <h2>Skills:</h2>
+            <div id="skills-container">
+                <div id="engineering-skills" class="skills-category">
+                    <h2>Engineering Skills</h2>
+                <ul class="skills-list">
+                        <li>
+                            <strong>Biomedical Engineering:</strong>
+                            <ul>
+                                <li>Biomechanics|</li>
+                              <li>Cell culture techniques|</li>
+                              <li>Lab Techniques (PCR, ELISA, Gel Electrophoresis)|</li>
+                              <li>Image processing and analysis|</li>
+                              <li>Design and development of medical devices</li>
+                            </ul>
+                        </li>
+                        <li>
+                      <strong>Mechanical Engineering:</strong>
+                      <ul>
+                        <li>CAD:
+                          <ul>
+                            <li>AutoCAD|</li>
+                            <li>Solidworks|</li>
+                            <li>TinkerCAD|</li>
+                          </ul>
+                        </li>
+                        <li>Analysis and Design:
+                          <ul>
+                            <li>|Finite Element Analysis (FEA)|</li>
+                            <li>Thermodynamics|</li>
+                            <li>Materials Science|</li>
+                            <li>Modeling and Simulations</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  
+                    <li>
+                      <strong>Electrical Engineering:</strong>
+                      <ul>
+                        <li>Circuit Design/Analysis|</li>
+                        <li>Arduino|</li>
+                        <li>PLC|</li>
+                      </ul>
+                    </li>
+                  
+                    <li>
+                      <strong>Chemical Engineering:</strong>
+                      <ul>
+                        <li>|Process Design|</li>
+                        <li>Reaction Synthesis|</li>
+                        <l1>Lab techniques(Spectroscopy, Chromotography, etc.)</l1>
+                      </ul>
+                    </li>
+                  
+                    <li>
+                      <strong>General Engineering Skills:</strong>
+                      <ul>
+                        <li>MATLAB|</li>
+                        <li>Excel|</li>
+                        <li>MS Project</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                    <div id="technical-skills" class="skills-category" style="display: none;">
+                        <h2>Technical Skills</h2>
+                    <ul class="skills-list">
+                        <li>
+                          <strong>Frontend:</strong>
+                          <ul>
+                            <li>Languages:
+                              <ul>
+                                <li>HTML/CSS|</li>
+                                <li>JavaScript|</li>
+                                <li>Swift|</li>
+                              </ul>
+                            </li>
+                            <li>Frameworks/Libraries:
+                              <ul>
+                                <li>|React.js|</li>
+                                <li>Angular|</li>
+                                <li>Bootstrap|</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      
+                        <li>
+                          <strong>Backend:</strong>
+                          <ul>
+                            <li>Languages:
+                              <ul>
+                                <li>|Python|</li>
+                                <li>Java|</li>
+                                <li>C++|</li>
+                                <li>C#|</li>
+                                <li>Node.js|</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      
+                        <li>
+                          <strong>Databases:</strong>
+                          <ul>
+                            <li>Relational Databases:
+                              <ul>
+                                <li>MySQL|</li>
+                              </ul>
+                            </li>
+                            <li>NoSQL Databases:
+                              <ul>
+                                <li>|MongoDB|</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      
+                        <li>
+                          <strong>Web Services:</strong>
+                          <ul>
+                            <li>Cloud Platforms:
+                              <ul>
+                                <li>Amazon Web Services (AWS)|</li>
+                              </ul>
+                            </li>
+                            <li>APIs:
+                              <ul>
+                                <li>|Web API|</li>
+                                <li>REST/JSON|</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      
+                        <li>
+                          <strong>Tools/Software/Extras:</strong>
+                          <ul>
+                            <li>Development Environments:
+                              <ul>
+                                <li>|Visual Studio Code|</li>
+                                <li>IntelliJ IDEA|</li>
+                                <li>Jupyter Notebooks|</li>
+                              </ul>
+                            </li>
+                            <li>Version Control:
+                              <ul>
+                                <li>|Git/GitHub</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+            </div>
+            <button id="toggle-skills-btn">Switch Skills</button>
+        </div>
+    </section>
+
+    <section id="project">
+        <div class="container">
+            <h2>Projects</h2>
+            <h2>Personal Finance Tracker</h2>
+            <p>The Personal Finance Manager is a web-based application designed to help users 
+                effortlessly manage their expenses and budget effectively. This financial tool 
+                provides a user-friendly interface for tracking transactions, visualizing budgets, 
+                and gaining insights into spending patterns.</p>
+
+            <h3>Technologies Used</h3>
+            <ul>
+                <li><strong>Backend:</strong> Python (Flask), SQLAlchemy</li>
+                <li><strong>Frontend:</strong> HTML, CSS</li>
+                <li><strong>Database:</strong> SQLite</li>
+                <li><strong>Deployment:</strong> AWS</li>
+                <li><strong>Data Analysis:</strong> Matplotlib, Pandas</li>
+            </ul>
+
+            <h3>View more detailed description</h3>
+            <p><a href="finance.html">View Project</a></p>
+        </div>
+
+        <div class="container">
+          <h2>NBA Statistics Predictor</h2>
+          <p>The project seamlessly integrates web scraping and machine learning 
+            to analyze and predict NBA player statistics, utilizing technologies 
+            like Requests, Pandas, and Scikit-learn. It involves systematic data 
+            collection from the NBA website since the 2014-15 season, training a 
+            Random Forest Regressor for predictions, and identifying potential MVP 
+            candidates. The project also incorporates visualizations with Matplotlib 
+            and employs Python as the primary development language.</p>
+          <h3>Technologies Used</h3>
+          <ul>
+            <li><strong>Web Scraping:</strong> Requests, Beautiful Soup</li>
+            <li><strong>Data Analysis & ML:</strong> Pandas, NumPy, Scikit-learn</li>
+            <li><strong>Visualization:</strong> Matplotlib</li>
+            <li><strong>Randomization & Timing:</strong> NumPy, Time Library</li>
+            <li><strong>Web Technologies:</strong> HTTP, JSON</li>
+            <li><strong>Development:</strong> Python</li>
+          </ul>          
+
+          <h3>View more detailed description</h3>
+          <p><a href="NBA_stat.html">View Project</a></p>
+      </div>
+      <div class="container">
+        <h2>FlowChart Generator</h2>
+        <p>The Flowchart Editor is a Java Swing application for creating
+           and visualizing flowcharts with ease. Users can design tasks, 
+           establish connections, and customize shapes within an intuitive 
+           graphical interface. Dynamic resizing of textboxes based on label length
+            enhances flexibility, making it a versatile tool for creating and 
+            editing flowcharts.</p>
+
+        <h3>Technologies Used</h3>
+        <ul>
+          <li><strong>Programming Language:</strong> Java</li>
+          <li><strong>Graphical User Interface (GUI) Library:</strong> Swing</li>
+          <li><strong>Integrated Development Environment (IDE):</strong> IntelliJ IDEA (or your preferred Java IDE)</li>
+        </ul>
+
+        <h3>View more detailed description</h3>
+        <p><a href="flowchart.html">View Project</a></p>
+    </div>
+
+    <div class="container">
+      <h2>Facial Recognition Model</h2>
+      <p>This MATLAB project involves fine-tuning a SqueezeNet model 
+        for face recognition using a dataset of facial images. The code 
+        includes data preparation, model configuration, training, and testing 
+        phases, ultimately evaluating the trained model's accuracy on a 
+        validation set and visually assessing its performance on randomly 
+        selected images. The goal is to create a face recognition system capable 
+        of distinguishing between different individuals based on their facial 
+        features.</p>
+
+      <h3>Technologies Used</h3>
+      <ul>
+        <li><strong>MATLAB:</strong> The main programming environment for implementing and executing the entire project.</li>
+        <li><strong>Deep Learning Toolbox:</strong> MATLAB's toolbox for designing, training, and deploying deep learning models.</li>
+        <li><strong>Image Processing Toolbox:</strong> Used for image data manipulation, augmentation, and related tasks.</li>
+        <li><strong>SqueezeNet Model:</strong> A pre-trained convolutional neural network architecture employed as the base model for face recognition.</li>
+        <li><strong>Computer Vision System Toolbox:</strong> Potentially used for additional computer vision tasks and functionalities.</li>
+    </ul>
+      <h3>View more detailed description</h3>
+      <p><a href="facial.html">View Project</a></p>
+    </section>
+
+    <section id="research">
+      <div class="container">
+          <h2>Current Research</h2>
+          <p>I'm currently working as a research assistsant at Nazockdast Labs under
+            the Applied Sciences and Engineering Department at UNC Chapel Hill. In this 
+            lab we use Python, C++, and MATLAB to study particle and crowd dynamics, and 
+            to create simulations that accurately model particle physics. Currently, I'm 
+            collaborating with a few other undergraduate students in order to model a 
+            group of particles going through a gate and accurately simulating the brownian 
+            motion of the particles.</p>
+          <p>
+            In order to create these simulations, we utilize the HOOMD-blue package in python. 
+            HOOMD-blue provides a high-level interface for setting up particle simulations, 
+            and it is designed to efficiently leverage both CPUs and GPUs for accelerated 
+            performance. Users can specify the interactions between particles, set simulation 
+            parameters, and run molecular dynamics simulations to observe the behavior of 
+            particle systems over time. I will keep this section updated as our projects 
+            progress.
+          </p>
+          <p>
+          <a href="https://www.nazockdastlab.com/" target="_blank" rel="noopener noreferrer">
+            Lab Site
+          </a>
+          </p>
+      </div>
+  </section>
+
+  <section id="volunteer">
+    <div class="container">
+        <h2>Volunteer Work</h2>
+        <!-- Volunteer Experience 1 -->
+        <div class="volunteer-entry">
+          <h3>Ambulance and Hospital Volunteer</h3>
+          <p>EMT Student</p>
+          <p>July, 2023 - August, 2023</p>
+          <p> As an EMT student, I volunteered by working with real 
+            paramedics and nurses at local EMS stations in Wilmington, NC 
+            and at New Hanover Hospital. I developed effective communicational 
+            skills in order to work with my team, and to talk to patients. I also 
+            learned how to work effectively with a team in stressful situations, 
+            while staying focused on the objective.
+          </p>
+      </div>
+        
+        <!-- Volunteer Experience 2 -->
+        <div class="volunteer-entry">
+          <h3>Crop Hindu Center</h3>
+          <p>Volunteer</p>
+          <p>December, 2021 - July, 2022</p>
+          <p>Volunteered over 120 hours at the Crop Hindu Center in
+            Charlotte, NC. I worked with a team and praticipated in 
+            setting up classes each weekend and organizing for events 
+            and holidays such as Holi. Displayed team-working abilities
+            and effective communication to complete tasks.
+          </p>
+      </div>
+
+        <!-- Volunteer Experience 3 -->
+        <div class="volunteer-entry">
+            <h3>Salvation Army Fundraiser</h3>
+            <p>Event Organizer</p>
+            <p>April, 2021 - May, 2021</p>
+            <p>I organized an event that raised $1k in donations and goods for the 
+              salvation army through a club. I advertised and set up the event and 
+              displayed leadership abilities, by working with members of the club during
+              the event days.
+            </p>
+        </div>
+
+        <!-- Add more entries as needed -->
+
+    </div>
+</section>
+
+<section id="education">
+  <div class="container">
+  <h2>Education and Certifications</h2>
+  
+    <h3>University of North Carolina at Chapel Hill</h3>
+    <u1>
+      <l1><strong>Majors:</strong> Computer Science B.S., Biomedical Engineering B.S.</l1>
+      <l1><strong>Minors:</strong> Chemistry</l1>
+      <li><strong>GPA - 3.98</strong></li>
+    </u1>
+
+    <button id="toggle-coursework">Toggle Coursework</button>
+    <ul id="bme-coursework" style="display: none;">
+        <!-- BME Coursework -->
+        <li><strong>Relevant CourseWork (Engineering): </strong></li>
+        <li>Materials Sciences (BMME 209)</li>
+        <li>Physics E&M (PHYS 119)</li>
+        <li>Differential Equations (Math 383/L)</li>
+        <li>Biomedical Mechanics (BMME 205)</li>
+        <li>Biomedical Engineering Design and Manufacturing (BMME 298)</li>
+        <li>Organic Chemistry/Biochemistry (CHEM 261/262/430)</li>
+        <li>Analytical Chemistry (CHEM 241/L)</li>
+        <li>Molecular Biology (BIOL 220)</li>
+    </ul>
+
+    <ul id="cs-coursework" style="display: none;">
+        <!-- CS Coursework -->
+        <li><strong>Relevant CourseWork (Computer Science): </strong></li>
+        <li>Data Structures and Algorithims (COMP 210)</li>
+        <li>Discrete Structures (COMP 283)</li>
+        <li>Multivariable Calculus (MATH 233)</li>
+        <li>Intro to Scientific Programming (COMP 116)</li>
+    </ul>
+
+    <h3>Ceritfications</h3>
+    <ul>
+      <li><solid>EMT Certification</solid></li>
+    </ul>
+
+  </div>
+</section>
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sujay Patel. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../static/toggle-skills.js"></script>
+    <script src="../static/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../static/scroll.js"></script>
+</body>
+
+</html>

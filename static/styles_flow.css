@@ -1,0 +1,177 @@
+#development-process {
+    text-align: center;
+}
+
+#development-process img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+#screenshots {
+    padding: 40px 0;
+}
+
+.screenshot {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.screenshot img {
+    max-width: 50%;
+    border: 1px solid #ddd; /* Add a border around the screenshots */
+    border-radius: 5px;
+}
+
+.screenshot p {
+    margin: 30px 0 0;
+}
+#github {
+    padding: 40px 0;
+}
+
+#github p {
+    margin: 10px 0;
+}
+
+#github a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#github a:hover {
+    background-color: #0066cc;
+}
+
+#github img {
+    height: 20px; /* Adjust the height of the GitHub logo */
+    margin-right: 5px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#github {
+    padding: 40px 0;
+    background-color: #2ecc71;
+    color: #fff;
+    text-align: center; /* Center the content */
+}
+
+#github a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#github a:hover {
+    background-color: #218c53;
+}
+
+#project-overview,
+#key-features,
+#development-process,
+#screenshots {
+    padding: 40px 0;
+}
+
+.container h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container p {
+    color: #555;
+    text-align: center;
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container ul li {
+    color: #666;
+    margin: 10px 0;
+}
+
+#development-process img {
+    max-width: 80%; /* Decreased the width */
+    height: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.screenshot {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.screenshot img {
+    max-width: 75%; /* Decreased the width */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.screenshot p {
+    margin: 15px 0 0; /* Increased the margin */
+    font-size: 18px; /* Increased the font size */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}

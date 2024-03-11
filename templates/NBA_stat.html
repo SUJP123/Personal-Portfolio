@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Stats Predictor</title>
+    <link rel="stylesheet" href="../static/styles_NBA_stat.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>NBA Stats Predictor</h1>
+            <p>Predict NBA stats, season leaders, and MVP winners.</p>
+        </div>
+    </header>
+
+    <section id="overview">
+        <div class="container">
+            <h2>Overview</h2>
+            <p>This project integrates web scraping and machine learning 
+                to analyze and predict NBA player statistics. The data is 
+                gathered by systematically scraping regular season and playoff
+                 stats for each player since the 2014-15 season from the NBA 
+                 website. The web scraping process incorporates random delays to 
+                 mimic human behavior and avoid detection. Using a Random Forest 
+                 Regressor, the model is trained to predict player statistics for 
+                 key features. Predictions are then applied to individual players, 
+                 showcasing expected performance for the upcoming season. Additionally, 
+                 the project includes a feature to identify potential MVP candidates based 
+                 on weighted scores derived from predicted statistics.</p>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Process and Key Features</h2>
+            <li><strong>Web Scraping Infrastructure:</strong>
+                <ul>
+                  <li><strong>URL Dependencies Analysis:</strong> Examining the URL structure to understand dependencies for web scraping.</li>
+                  <li><strong>Dynamic Data Retrieval:</strong> Using the Requests library to fetch JSON data from the NBA website's API.</li>
+                  <li><strong>Data Structuring:</strong> Utilizing Beautiful Soup for parsing HTML and structuring data into Pandas DataFrames.</li>
+                </ul>
+              </li>
+            
+              <li><strong>Data Collection and Processing:</strong>
+                <ul>
+                  <li><strong>Seasonal Iterations:</strong> Systematically scraping player statistics for both regular seasons and playoffs since the 2014-15 NBA season.</li>
+                  <li><strong>Randomized Delays:</strong> Incorporating random delays with NumPy to simulate human-like behavior during web scraping.</li>
+                  <li><strong>Data Concatenation:</strong> Merging individual player statistics with additional information like the season and type (regular season or playoffs).</li>
+                </ul>
+              </li>
+            
+              <li><strong>Machine Learning Model:</strong>
+                <ul>
+                  <li><strong>Random Forest Regressor:</strong> Implementing Scikit-learn's Random Forest Regressor for predicting future player statistics.</li>
+                  <li><strong>Feature Selection:</strong> Focusing on key player performance features such as points, assists, rebounds, steals, and blocks.</li>
+                  <li><strong>Individual Player Predictions:</strong> Applying the trained model to predict statistics for specific players in the upcoming season.</li>
+                </ul>
+              </li>
+            
+              <li><strong>Evaluation and Visualization:</strong>
+                <ul>
+                  <li><strong>Model Evaluation Metrics:</strong> Assessing model performance using metrics like Mean Squared Error (MSE) and Mean Absolute Error (MAE).</li>
+                  <li><strong>Scatter Plots and Residuals:</strong> Visualizing actual vs. predicted values and model residuals using Matplotlib.</li>
+                  <li><strong>Predicted Stats Display:</strong> Displaying predicted statistics for specific players, providing insights into their potential future performance.</li>
+                </ul>
+              </li>
+            
+              <li><strong>MVP Candidate Identification:</strong>
+                <ul>
+                  <li><strong>Weighted Score Calculation:</strong> Determining MVP candidates by calculating weighted scores based on predicted statistics.</li>
+                  <li><strong>Top Performer Identification:</strong> Identifying top players with the highest MVP scores for consideration.</li>
+                </ul>
+              </li>
+            
+              <li><strong>Development Environment:</strong>
+                <ul>
+                  <li><strong>Python Language:</strong> Employing Python as the primary programming language for the entire project.</li>
+                  <li><strong>Library Integration:</strong> Leveraging key libraries like Pandas, NumPy, Scikit-learn, and Matplotlib for data manipulation, analysis, and visualization.</li>
+                </ul>
+              </li>
+        </div>
+    </section>
+
+    <section id="screenshots">
+        <div class="container">
+            <h2>Screenshots</h2>
+            
+            <div class="screenshot">
+                <img src="../img/Player.png" alt="Screenshot 1">
+                <p>Predicted Stat for Target Player</p>
+            </div>
+
+            <div class="screenshot">
+                <img src="../img/season_leaders.png" alt="Screenshot 2">
+                <p>Predicted Leaders for Next Season</p>
+            </div>
+            
+            <div class="screenshot">
+                <img src="../img/MVPs.png" alt="Screenshot 3">
+                <p>Top MVP Candidates</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="github">
+        <div class="container">
+            <h2>GitHub Repository</h2>
+            <a href="https://github.com/SUJP123/NBA_Stat_Predictions" target="_blank" rel="noopener noreferrer">
+                <img src="../img/Github_logo.png" alt="GitHub Logo">
+                GitHub Repository
+            </a>
+        </div>
+    </section>
+
+    <a href="home.html" class="back-button">Go Back to Home</a>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sujay Patel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

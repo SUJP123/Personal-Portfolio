@@ -1,0 +1,367 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.header-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.project {
+    margin-bottom: 40px; /* Adjust the bottom margin as needed */
+    text-align: left;
+}
+
+.project h2 {
+    font-size: 1.5em;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin-bottom: 20px;
+}
+
+.project ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project ul li {
+    margin: 10px 0;
+}
+
+#project a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#project a:hover {
+    background-color: #2980b9;
+    transform: scale(1.05); /* Increase the size on hover */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0066cc;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.skills-category {
+    margin-bottom: 20px;
+}
+
+.skills-category h2 {
+    font-size: 1.5em;
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin: 5px 0;
+}
+
+#toggle-skills-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; 
+}
+
+#toggle-skills-btn:hover {
+    background-color: #2980b9;
+}
+
+#skills-container {
+    margin-top: 20px;
+}
+
+.screenshot img {
+    max-width: 40%; /* Adjust the max-width of screenshots */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.screenshot p {
+    font-size: 16px; /* Adjust the font size of screenshot captions */
+    margin: 10px 0 0;
+}
+
+#github {
+    padding: 40px 0;
+    text-align: center; /* Centerize the GitHub section */
+}
+
+#github p {
+    margin: 10px 0;
+}
+
+#github a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#github a:hover {
+    background-color: #0066cc;
+}
+
+#github img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+#contact-icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#contact-icons a {
+    display: inline-block;
+    margin-left: 10px;
+    color: inherit; /* Set the text color to inherit from the parent */
+}
+
+#contact-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.contact-icon {
+    display: inline-block;
+    margin-right: 15px;
+    transition: color 0.3s ease;  /* Smooth transition for color change */
+}
+
+.contact-icon:hover {
+    color: #FF5733;  /* Change to your desired hover color */
+}
+
+/* Additional styles for the message icon */
+#copy-number {
+    cursor: pointer;
+}
+
+#research a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#research a:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+#volunteer {
+    padding: 40px 0;
+    background-color: #fff; /* Adjust background color */
+}
+
+.volunteer-entry {
+    margin-bottom: 20px;
+}
+
+.volunteer-entry h3 {
+    color: #333; /* Adjust text color */
+}
+
+.volunteer-entry p {
+    margin: 5px 0;
+    color: #555; /* Adjust text color */
+}
+
+#education {
+    padding: 40px 0;
+}
+
+#education h2 {
+    color: #333;
+}
+
+#education h3 {
+    margin-top: 20px;
+}
+
+#education ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#education li {
+    margin-bottom: 10px;
+}
+
+/* Coursework Lists */
+#bme-coursework,
+#cs-coursework {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    display: none;
+}
+
+#toggle-coursework {
+    display: block;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+#toggle-coursework:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Clear the float after the buttons */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#toggle-coursework {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#toggle-coursework:hover {
+    background-color: #2980b9;
+}
+
+.coursework {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    list-style: none;
+}
+
+.coursework li {
+    margin-bottom: 10px;
+}
+
+.coursework strong {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #3498db;
+}
