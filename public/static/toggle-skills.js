@@ -30,3 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const projToggle = document.getElementById('toggle-projects-btn');
+    const csProjects = document.getElementById('cs-projects');
+    const engProjects = document.getElementById('eng-projects');
+
+    projToggle.addEventListener("click", function () {
+    if (csProjects.style.display === "none") {
+      csProjects.style.display = "block";
+      engProjects.style.display = "none";
+    } else {
+      csProjects.style.display = "none";
+      engProjects.style.display = "block";
+    }
+  });
+});

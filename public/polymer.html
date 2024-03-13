@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymer Simulation</title>
+    <link rel="stylesheet" href="static/styles_polymer.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Polymer Simulation</h1>
+            <p>An Interactive Project to Analyze Polymers</p>
+        </div>
+    </header>
+
+
+    <section id="project-overview">
+        <div class="container">
+            <h2>Overview</h2>
+            <p>In this simulation project, we explore the dynamic behavior 
+                of polymer chains under the influence of external fields, 
+                such as electric fields. Leveraging the capabilities 
+                of HOOMD-blue, a powerful molecular dynamics toolkit, the simulation
+                 captures the intricate interactions within polymer chains as 
+                 they respond to varying field strengths and directions.</p>
+        </div>
+    </section>
+
+    <section id="key-features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <li>
+                <strong>Jupyter Notebooks Integration:</strong>
+                <p>Seamlessly integrated with Jupyter Notebooks, the project combines code, visualizations, and explanatory text. This facilitates a cohesive and interactive exploration of molecular dynamics, making it accessible to both novices and experts.</p>
+            </li>
+    
+            <li>
+                <strong>Polymer Chain Setup:</strong>
+                <p>The simulation begins with a robust setup of polymer chains, defining key parameters such as degree of polymerization, position, bonds, and angles. This foundational step ensures a realistic representation of polymer structures.</p>
+            </li>
+    
+            <li>
+                <strong>Harmonic Potentials:</strong>
+                <p>Harmonic potentials are applied to simulate bond interactions within polymer chains. This feature introduces realistic forces and constraints, contributing to the accurate portrayal of molecular dynamics.</p>
+            </li>
+    
+            <li>
+                <strong>External Electric Fields Customization:</strong>
+                <p>Users can customize external electric fields by adjusting field strength and axis direction. This feature enables the exploration of diverse scenarios, offering insights into how polymer chains respond to varying external influences.</p>
+            </li>
+    
+            <li>
+                <strong>Lennard-Jones (LJ) Forces Integration:</strong>
+                <p>LJ forces are seamlessly integrated into the simulation, capturing non-bonded interactions between particles. This addition enhances the realism of the simulation, providing a more nuanced understanding of molecular dynamics.</p>
+            </li>
+    
+            <li>
+                <strong>Data Analysis and Visualization:</strong>
+                <p>The project incorporates advanced data analysis techniques, demonstrated through custom Python code. Potential energy data is extracted from the simulation trajectory, and a dynamic plot is generated, allowing users to visualize the energy changes over the course of the simulation.</p>
+            </li>
+    
+        </div>
+    </section>
+
+    <section id="simulation">
+        <div class="container">
+            <h2>Simulation</h2>
+            <div id="simulationImageContainer">
+                <img id="simulationImage" src="slide_img/initial_position.png" alt="Polymer Simulation">
+            </div>
+            <button id="startButton">Start</button>
+            <button id="stopButton">Stop</button>
+            <button id="resetButton">Reset</button>
+        </div>
+    </section>
+
+    <section id="visualization" class="container-section">
+        <div id="codeSnippets" class="container">
+            <h2>Code Snippets & Data Analysis</h2>
+            <div class="codeSnippetContainer" data-index="0">
+                <pre>
+                    #Code Snippet 1 for data analysis and plotting of the POLYMER Simulation
+                    sigma = 1
+                    epsilon = 1
+                    r = x
+                    V_lj = 4 * epsilon * ((sigma / r) ** 12 - (sigma / r) ** 6)
+
+                    fig = matplotlib.figure.Figure(figsize=(5, 3.09))
+                    ax = fig.add_subplot()
+                    ax.plot(r, V_lj)
+                    ax.set_xlabel('r')
+                    ax.set_ylabel('V')
+                    fig
+                </pre>
+                <button class="runCodeButton">Run Code</button>
+            </div>
+            <div class="plotContainer" data-index="0">
+                <img id="plot" src="img/polymerplot1.png" class="hidden">
+            </div>
+
+            <div class="codeSnippetContainer" data-index="1">
+                <pre>
+                    #Code Snippet 2 for data analysis and plotting of the POLYMER Simulation
+                    q = 1.609 * 10**(-19)
+                    r = x
+                    E = r * q * field_strength
+
+                    fig = matplotlib.figure.Figure(figsize=(5, 3.09))
+                    ax = fig.add_subplot()
+                    ax.plot(r, E)
+                    ax.set_xlabel('r')
+                    ax.set_ylabel('Energy')
+                    fig
+                </pre>
+                <button class="runCodeButton">Run Code</button>
+            </div>
+            <div class="plotContainer" data-index="1">
+                <img id="plot" src="img/polymerplot2.png" class="hidden">
+            </div>
+
+            <div class="codeSnippetContainer" data-index="2">
+                <pre>
+                    #Code Snippet 3 for data analysis and plotting of the POLYMER Simulation
+                    traj = gsd.hoomd.open('impact.gsd')
+
+                    q = 1.609 * 10 ** (-19)
+                    y = [ ]
+                    for frame in traj:
+                        energy = frame.particles.position[0][0] * q * field_strength
+                        y.append(energy)
+
+                    Frames = range(len(traj))
+                    fig = matplotlib.figure.Figure(figsize=(5, 3.09))
+                    ax = fig.add_subplot()
+                    ax.plot(Frames, y)
+                    ax.set_xlabel('frame')
+                    ax.set_ylabel('Energy')
+                    fig
+                </pre>
+                <button class="runCodeButton">Run Code</button>
+            </div>
+            <div class="plotContainer" data-index="2">
+                <!-- Plot container for code snippet 3 -->
+                <img id="plot" src="img/polymerplot3.png" class="hidden">
+            </div>
+            
+            <div>
+                <h2>Analysis</h2>
+                <p>As seen in the plots, I plotted the Lennard-Jones potential and 
+                    Electric Field Energy against the radius from the x-axis 
+                    for the particles in the simulation. As seen, polymer chains
+                    furthest from the x-axis have the greatest magnitude of field energy, while
+                    the Lennard-Jones potential for the particles, dips very low 
+                    at a value of r0 which is the point of equillibrium seperation
+                    for the polymer units. Additionally, the plot of Electric field energy
+                    against the frame of simulation for a particle in the system was made.
+                    This shift in the graph indicates that the polymer units are initially
+                    disrupted by the external electric field which causes the position 
+                    of the units to vary by a great degree. However, once the simulation
+                    runs long enough, the polymer units are able to find a position of 
+                    equillibrium in which the potential energy from the electric field stays
+                    constant.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    
+    
+
+
+    <section id="github">
+        <div class="container">
+            <h2>View Source Code</h2>
+            <a href="https://github.com/SUJP123/Polymer-Simulation" target="_blank" rel="noopener noreferrer">
+                <img src="img/Github_logo.png" alt="GitHub Logo">
+                GitHub Repository
+            </a>
+        </div>
+    </section>
+
+    <a href="home.html" class="back-button">Go Back to Home</a>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Sujay Patel. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="static/polymer.js"></script>
+    <script src="static/code-toggle.js"></script>
+</body>
+
+</html>
