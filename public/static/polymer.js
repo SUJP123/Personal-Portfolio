@@ -39,7 +39,7 @@ function startSimulation() {
         simulationInterval = setInterval(() => {
         currentImageIndex = (currentImageIndex + 1) % numImages;
         simulationImage.src = imagePaths[currentImageIndex]; 
-    }, 50);
+    }, 100);
     check = true
 }
 
