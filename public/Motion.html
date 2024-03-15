@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Detector Security System</title>
+    <!-- Include your CSS files here -->
+    <link rel="stylesheet" href="static/styles_motion.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Motion Detector Security System</h1>
+            <p>Secure your room with ease.</p>
+        </div>
+    </header>
+
+    <section id="overview">
+        <div class="container">
+            <h2>Overview</h2>
+            <p>The Motion Detecting Security System is a 
+                DIY project that employs Arduino-based technology to create 
+                a motion detection system. It aims to provide a simple and effective
+                 solution for home security or monitoring applications. The 
+                 system utilizes ultrasonic sensors to detect motion within a 
+                 specified range and triggers an alarm when motion is detected. 
+                 A momentary push-button switch is incorporated to enable or disable 
+                 the system as needed.
+            </p>
+        </div>
+    </section>
+
+    <section id="key-features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <ul>
+                <li> <strong>Arduino Uno:</strong> Serves as the microcontroller platform for controlling the system.</li>
+                <li> <strong>Ultrasonic Sensor:</strong> Detects motion by measuring distance using ultrasonic waves.</li>
+                <li> <strong>Momentary Push-Button Switch:</strong> Allows users to activate or deactivate the system.</li>
+                <li> <strong>Passive Buzzer:</strong> Emits an alarm sound when motion is detected.</li>
+                <li> <strong>Tinkercad and CAD Software:</strong> Utilized for circuit design and physical enclosure modeling, respectively.</li>
+              </ul>
+        </div>
+    </section>
+
+    <section id="screenshots">
+        <div class="container">
+            <h2>TinkerCAD, CAD, and Circuit Screenshots</h2>
+
+            <!-- Add screenshots here -->
+            <div class="screenshot">
+                <img src="img/TinkerCAD.png" alt="Screenshot 1">
+                <p>TinkerCAD</p>
+            </div>
+
+            <div class="screenshot">
+                <img src="img/CAD.png" alt="Screenshot 2">
+                <p>CAD</p>
+            </div>
+
+            <div class="screenshot">
+                <img src="img/Circuit.png" alt="Screenshot 3">
+                <p>Circuit</p>
+            </div>
+
+
+    <section id="visualization" class="container-section">
+        <div id="codeSnippets" class="container">
+            <h2>Source Code</h2>
+            <div class="codeSnippetContainer" data-index="0">
+                <pre>
+                    #define trigPin 12
+                    #define echoPin 5
+                    #define buttonPin 2 
+                    int buzzer = 13;
+                    bool checker = false;
+                    bool previousButtonState = HIGH; // Initial state of the button
+
+                    void setup() {
+                        Serial.begin(9600);
+                        pinMode(trigPin, OUTPUT);
+                        pinMode(echoPin, INPUT);
+                        pinMode(buzzer, OUTPUT);
+                        pinMode(buttonPin, INPUT_PULLUP); // Internal pull-up resistor
+                        }
+
+                    void loop() {
+                        bool buttonState = digitalRead(buttonPin);
+
+                        if (buttonState == LOW && previousButtonState == HIGH) {
+                        checker = !checker; // Toggle checker state
+                        }
+
+                        previousButtonState = buttonState;
+
+                        while (checker) {
+                            noTone(buzzer);
+                            long duration, distance;
+                            igitalWrite(trigPin, LOW); // Added this line
+                            delayMicroseconds(2); // Added this line
+                            digitalWrite(trigPin, HIGH);
+                            delayMicroseconds(10); // Added this line
+                            digitalWrite(trigPin, LOW);
+                            duration = pulseIn(echoPin, HIGH);
+                            distance = (duration / 2) / 29.1;
+                            Serial.println(distance);
+
+                            //Distance if door opens
+                            if (distance less than 130) {
+                                tone(buzzer, 1000);
+                                }
+
+                            // Check button state again 
+                            buttonState = digitalRead(buttonPin);
+                            if (buttonState == LOW && previousButtonState == HIGH) { 
+                                checker = false;
+                                }
+                            previousButtonState = buttonState;
+                                 }
+                            }
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <a href="home.html" class="back-button">Go Back to Home</a>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sujay Patel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
